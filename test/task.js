@@ -188,6 +188,7 @@ describe('Tasks API', () => {
 
         it('It should NOT DELETE a Task that is not in the database', (done) => {
             const taskID = 145;
+            console.log(taskID)
             chai.request(server)
                 .delete(`/api/tasks/${taskID}`)
                 .end((err, response) => {
